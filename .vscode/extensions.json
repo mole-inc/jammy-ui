@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    // Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
+    "editorConfig.editorconfig",
+    "gruntfuggly.todo-tree",
+    "esbenp.prettier-vscode",
+    "tyriar.sort-lines",
+  ]
+}
