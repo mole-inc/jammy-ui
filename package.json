@@ -1,24 +1,29 @@
 {
   "name": "jammy-ui",
   "description": "",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "keywords": [
+    "mole-inc",
+    "jammy"
+  ],
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
   "license": "MIT",
   "scripts": {
     "prepare": "simple-git-hooks",
+    "dev": "pnpm run storybook",
     "build": "rollup -c --bundleConfigAsCjs",
+    "remove": "pnpm run npkill",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
     "commitlint": "commitlint -e",
+    "npkill": "npkill",
     "tsc": "tsc"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm run commitlint"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.12",
     "@commitlint/cli": "^17.4.2",
     "@commitlint/config-conventional": "^17.4.2",
     "@rollup/plugin-commonjs": "^24.0.0",
@@ -37,6 +42,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^3.10.0",
+    "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-typescript2": "^0.34.1",
@@ -47,6 +53,7 @@
     "react-dom": "^16.8.0"
   },
   "dependencies": {
+    "npkill": "^0.10.0",
     "simple-git-hooks": "^2.8.1"
   },
   "engines": {
