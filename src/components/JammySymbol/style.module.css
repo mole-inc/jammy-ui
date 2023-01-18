@@ -1,0 +1,11 @@
+.Large {
+  max-width: 120px;
+}
+
+.Medium {
+  max-width: 80px;
+}
+
+.Small {
+  max-width: 40px;
+}
