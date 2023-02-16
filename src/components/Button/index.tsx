@@ -2,7 +2,20 @@ import React, { ReactNode, useMemo } from 'react'
 import { COLOR } from '../../constants/color'
 import { FONT_WEIGHT } from '../../constants/fontWeight'
 import { SPACING } from '../../constants/space'
+import { Inline } from '../Inline'
 import style from './style.module.css'
+
+const WIDTH = {
+  S: {
+    MAX_WIDTH: '80px',
+  },
+  M: {
+    MAX_WIDTH: '160px',
+  },
+  L: {
+    MAX_WIDTH: '320px',
+  },
+}
 
 type Props = {
   fn: () => void
@@ -18,51 +31,27 @@ type Props = {
     | 'BRIGHT'
     | 'DANGER'
   >
-  size?: 'S' | 'M' | 'L'
-}
-
-const WIDTH = {
-  S: {
-    WIDTH: '80px',
-    MAX_WIDTH: '80px',
-  },
-  M: {
-    WIDTH: '160px',
-    MAX_WIDTH: '160px',
-  },
-  L: {
-    WIDTH: '100%',
-    MAX_WIDTH: '320px',
-  },
+  size?: keyof typeof WIDTH
 }
 
 const Button = ({ fn, label, color, size }: Props) => {
-  const textColor = useMemo(() => {
-    if (
+  const styleVar = {
+    width: '100%',
+    maxWidth: size ? WIDTH[size].MAX_WIDTH : WIDTH['M'].MAX_WIDTH,
+    padding: `${SPACING['XS']}px ${SPACING['XS']}px`,
+    backgroundColor: color ? COLOR[color] : COLOR['SHADE'],
+    color:
       color === 'ACCENT' ||
       color === 'TERTIARY' ||
       color === 'ACCENT_SECONDARY' ||
       color === 'BODY'
-    ) {
-      return COLOR['BRIGHT']
-    }
-    return COLOR['BODY']
-  }, [color])
+        ? COLOR['BRIGHT']
+        : COLOR['BODY'],
+  }
 
   return (
-    <button
-      style={{
-        width: size ? WIDTH[size].WIDTH : WIDTH['M'].WIDTH,
-        maxWidth: size ? WIDTH[size].MAX_WIDTH : WIDTH['M'].MAX_WIDTH,
-        padding: `${SPACING['XS']}px ${SPACING['XS']}px`,
-        backgroundColor: color ? COLOR[color] : COLOR['SHADE'],
-        color: textColor,
-        fontWeight: FONT_WEIGHT['medium'],
-      }}
-      className={style.Button}
-      onClick={fn}
-    >
-      <span>{label}</span>
+    <button style={styleVar} className={style.Button} onClick={fn}>
+      <Inline weight="M">{label}</Inline>
     </button>
   )
 }

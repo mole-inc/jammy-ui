@@ -1,7 +1,24 @@
 :root {
-  --fontGothic: 'Hiragino Sans', 'Helvetica Neue', Arial,
+  --BODY: '#282C39';
+  --DESCRIPTION: '#4F5464';
+  --TERTIARY: '#969FBE';
+  --BRIGHT: '#FFFFFF';
+  --SHADE: '#EBF0F4';
+  --BACKGROUND: '#F4F7FB';
+  --DISABLED: '#EBEBEB';
+  --TINT: '#EBEBEB';
+  --ACCENT: '#FF0B5E';
+  --ACCENT_SECONDARY: '#3757FF';
+  --ACCENT_TERTIARY: '#F8B62D';
+  --ACCENT_FORTY: '#FF9F59';
+  --SUCCESS: '#0EBA75';
+  --INFORMATION: '#D4EBFF';
+  --WARNING: '#FB27FF';
+  --DANGER: '#E4002C';
+
+  --FontGothic: 'Hiragino Sans', 'Helvetica Neue', Arial,
     'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
-  --fontMincho: 'ヒラギノ明朝 Pro', 'Hiragino Mincho Pro', '游明朝体',
+  --FontMincho: 'ヒラギノ明朝 Pro', 'Hiragino Mincho Pro', '游明朝体',
     'Yu Mincho', YuMincho, serif;
 
   --mediaLarge: 1440px;

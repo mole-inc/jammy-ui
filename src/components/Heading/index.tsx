@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 import { COLOR_TYPE } from '../../constants/color'
-import { Text } from '../Text'
+import { Inline } from '../Inline'
 import style from './style.module.css'
 
 type Props = {
@@ -14,49 +14,49 @@ const Heading = ({ tag, children, color }: Props) => {
     case 'h1':
       return (
         <h1 className={style.Heading}>
-          <Text size="X3L" color={color ? color : 'BODY'} weight="bold">
+          <Inline size="3XL" color={color ? color : 'BODY'} weight="B">
             {children}
-          </Text>
+          </Inline>
         </h1>
       )
     case 'h2':
       return (
         <h2 className={style.Heading}>
-          <Text size="X2L" color={color ? color : 'BODY'} weight="bold">
+          <Inline size="2XL" color={color ? color : 'BODY'} weight="B">
             {children}
-          </Text>
+          </Inline>
         </h2>
       )
     case 'h3':
       return (
         <h3 className={style.Heading}>
-          <Text size="XL" color={color ? color : 'BODY'} weight="bold">
+          <Inline size="XL" color={color ? color : 'BODY'} weight="B">
             {children}
-          </Text>
+          </Inline>
         </h3>
       )
     case 'h4':
       return (
         <h4 className={style.Heading}>
-          <Text size="L" color={color ? color : 'BODY'} weight="bold">
+          <Inline size="L" color={color ? color : 'BODY'} weight="B">
             {children}
-          </Text>
+          </Inline>
         </h4>
       )
     case 'h5':
       return (
         <h5 className={style.Heading}>
-          <Text size="M" color={color ? color : 'BODY'} weight="bold">
+          <Inline size="M" color={color ? color : 'BODY'} weight="B">
             {children}
-          </Text>
+          </Inline>
         </h5>
       )
     case 'h6':
       return (
         <h6 className={style.Heading}>
-          <Text size="S" color={color ? color : 'BODY'} weight="bold">
+          <Inline size="S" color={color ? color : 'BODY'} weight="B">
             {children}
-          </Text>
+          </Inline>
         </h6>
       )
   }

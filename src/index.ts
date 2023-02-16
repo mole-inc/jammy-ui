@@ -1,10 +1,10 @@
 import 'ress'
-import './assets/styles/variables.css'
-import './assets/styles/base.css'
+import './styles/variables.css'
+import './styles/base.css'
 
 export { JammySymbol } from './components/JammySymbol'
 
-export { Text } from './components/Text'
+export { Inline } from './components/Inline'
 
 export { Button } from './components/Button'
 

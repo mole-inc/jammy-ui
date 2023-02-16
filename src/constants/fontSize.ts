@@ -4,8 +4,8 @@ const FONT_SIZE = {
   M: '14px',
   L: '18px',
   XL: '24px',
-  X2L: '32px',
-  X3L: '36px',
+  '2XL': '32px',
+  '3XL': '36px',
 }
 
 export type FONT_SIZE_TYPE = keyof typeof FONT_SIZE
